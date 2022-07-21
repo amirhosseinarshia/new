@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
-    function ShowAll(){
+    function showAll(){
         return "hi";
     }
 }
