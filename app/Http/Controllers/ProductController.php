@@ -30,6 +30,9 @@ class ProductController extends Controller
 
     //simple function.
     function showAll(){
-        return "hi";
+        $product = Products::all();
+        foreach($product as $pd){
+            dump($pd);
+        }
     }
 }
