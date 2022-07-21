@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', [ProductController::class, 'showAll']);
+// Route::get('/products', [ProductController::class, 'showAll']);
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/product/create/{name}/{description}', 'create');
+    Route::get('/product/show/{id}', 'showProduct'); 
+    Route::get('/product/all', 'showAll'); 
+});
