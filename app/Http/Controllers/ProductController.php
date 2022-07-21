@@ -28,7 +28,7 @@ class ProductController extends Controller
          
     }
 
-    //simple function.
+    //get all items.
     function showAll(){
         $product = Products::all();
         foreach($product as $pd){
